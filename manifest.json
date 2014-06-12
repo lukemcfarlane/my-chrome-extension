@@ -1,0 +1,17 @@
+{
+	"manifest_version": 2,
+	"name": "My Chrome Extension",
+	"version": "1.0",
+	"description": "Description for my Chrome extension",
+	"permissions": [
+		"tabs",
+		"https://code.jquery.com/jquery-2.1.1.min.js"
+	],
+	"content_scripts": [{
+		"matches": ["http://my-website-to-match.test/"],
+		"js": ["jquery-2.1.1.min.js", "contentScript.js"],
+		"run_at": "document_end"
+		// "run_at": "document_start"
+		// "run_at": "document_idle"
+	}]
+}

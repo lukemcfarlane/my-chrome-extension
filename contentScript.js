@@ -1,0 +1,1 @@
+console.log('My Chrome extension is now running...');
